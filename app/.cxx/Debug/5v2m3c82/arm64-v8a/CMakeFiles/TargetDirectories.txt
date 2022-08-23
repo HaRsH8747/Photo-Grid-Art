@@ -1,0 +1,3 @@
+D:/Android/Envanto/Photo Collage Grid Pic Maker/app/.cxx/Debug/5v2m3c82/arm64-v8a/CMakeFiles/hello-jni.dir
+D:/Android/Envanto/Photo Collage Grid Pic Maker/app/.cxx/Debug/5v2m3c82/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/Android/Envanto/Photo Collage Grid Pic Maker/app/.cxx/Debug/5v2m3c82/arm64-v8a/CMakeFiles/rebuild_cache.dir

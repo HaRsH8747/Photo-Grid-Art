@@ -1,0 +1,1235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/collage_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/collage_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_bottom3"
+        android:elevation="@dimen/all_elevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:id="@+id/button_cancel_collage_image"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="myClickHandler">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/iv_Back"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="Back"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/l_regular"/>
+
+                    <ImageView
+                        android:id="@+id/iv_Back"
+                        android:layout_width="@dimen/tool_icon_size2"
+                        android:layout_height="@dimen/tool_icon_size2"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/back"
+                        android:scaleType="centerInside" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:id="@+id/button_save_collage_image"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="myClickHandler">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/iv_save1"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="Save"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/l_regular"/>
+
+                    <ImageView
+                        android:id="@+id/iv_save1"
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/save"
+                        android:scaleType="centerInside"
+                        android:textAllCaps="false" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <neo.photogridart.utils.MyViewFlipper
+        android:id="@+id/collage_view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/collage_footer"
+        android:background="@android:color/transparent"
+        android:gravity="bottom">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_grid"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:scrollbars="horizontal" />
+
+        <FrameLayout
+            android:id="@+id/pattern_color_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_pattern"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/recyclerview_height"
+                android:layout_gravity="bottom"
+                android:scrollbars="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/color_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/blacktransparent"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/hide_color_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_hide_button"
+                    android:clickable="true"
+                    android:onClick="myClickHandler"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:src="@drawable/ic_down_array" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recyclerview_height"
+                    android:layout_gravity="bottom"
+                    android:background="@android:color/transparent"
+                    android:scrollbars="horizontal" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/stickers_category_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_stickers"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/recyclerview_height"
+                android:layout_gravity="bottom"
+                android:scrollbars="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/stickers_child_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/blacktransparent"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/hide_sticker_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_hide_button"
+                    android:clickable="true"
+                    android:onClick="myClickHandler"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:src="@drawable/ic_down_array" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_stickers_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recyclerview_height"
+                    android:layout_gravity="bottom"
+                    android:background="@android:color/transparent"
+                    android:scrollbars="horizontal" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/blacktransparent"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Size   "
+                    android:textColor="#ffffffff" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seekbar_height"
+                    android:layout_gravity="center_vertical"
+                    android:max="100"
+                    android:progress="@integer/default_ssize_value"
+                    android:progressTint="@color/end_color"
+                    android:thumb="@drawable/control" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/seekbar_space_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Space "
+                    android:textColor="#ffffffff" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seekbar_height"
+                    android:layout_gravity="center_vertical"
+                    android:max="100"
+                    android:progress="@integer/default_space_value"
+                    android:progressTint="@color/end_color"
+                    android:thumb="@drawable/control" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/seekbar_corner_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Corner"
+                    android:textColor="#ffffffff" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_round"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seekbar_height"
+                    android:layout_gravity="center_vertical"
+                    android:max="100"
+                    android:progressTint="@color/end_color"
+                    android:thumb="@drawable/control" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/collage_ratio_horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/blacktransparent"
+            android:padding="3dp"
+            android:paddingRight="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="1dp">
+
+                <Button
+                    android:id="@+id/button11"
+                    style="@style/collage_ratio_button_style"
+                    android:background="@drawable/selector_collage_ratio_button"
+                    android:text="1:1" />
+
+                <Button
+                    android:id="@+id/button21"
+                    style="@style/collage_ratio_button_style"
+                    android:text="2:1" />
+
+                <Button
+                    android:id="@+id/button12"
+                    style="@style/collage_ratio_button_style"
+                    android:text="1:2" />
+
+                <Button
+                    android:id="@+id/button32"
+                    style="@style/collage_ratio_button_style"
+                    android:text="3:2" />
+
+                <Button
+                    android:id="@+id/button23"
+                    style="@style/collage_ratio_button_style"
+                    android:text="2:3" />
+
+                <Button
+                    android:id="@+id/button43"
+                    style="@style/collage_ratio_button_style"
+                    android:text="4:3" />
+
+                <Button
+                    android:id="@+id/button34"
+                    style="@style/collage_ratio_button_style"
+                    android:text="3:4" />
+
+                <Button
+                    android:id="@+id/button45"
+                    style="@style/collage_ratio_button_style"
+                    android:text="4:5" />
+
+                <Button
+                    android:id="@+id/button57"
+                    style="@style/collage_ratio_button_style"
+                    android:text="5:7" />
+
+                <Button
+                    android:id="@+id/button169"
+                    style="@style/collage_ratio_button_style"
+                    android:text="16:9" />
+
+                <Button
+                    android:id="@+id/button916"
+                    style="@style/collage_ratio_button_style"
+                    android:text="9:16" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/seekbar_blur_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/blacktransparent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Blur"
+                android:textColor="#ffffffff" />
+
+            <SeekBar
+                android:id="@+id/seekbar_collage_blur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="56"
+                android:progressTint="@color/end_color"
+                android:thumb="@drawable/control" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:visibility="invisible" />
+    </neo.photogridart.utils.MyViewFlipper>
+
+    <HorizontalScrollView
+        android:id="@+id/collage_footer"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scrollbars="none"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/collage_footer_inner_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start|center_vertical|center_horizontal|center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/button_collage_layout"
+                style="@style/collage_footer_imagebutton_style">
+
+                <TextView
+                    android:id="@+id/ttauto"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/image_auto"
+                    android:gravity="center"
+                    android:text="Layout"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/image_auto"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_blur"
+                style="@style/collage_footer_imagebutton_style"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/ttblur"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/blur"
+                    android:gravity="center"
+                    android:text="Blur"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/blur"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/square_blur_icon"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_background"
+                style="@style/collage_footer_imagebutton_style">
+
+                <TextView
+                    android:id="@+id/ttbackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/background"
+                    android:gravity="center"
+                    android:text="Background"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/background"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_stickers"
+                style="@style/collage_footer_imagebutton_style">
+
+                <TextView
+                    android:id="@+id/ttstickers"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/stickers"
+                    android:gravity="center"
+                    android:text="Stickers"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/stickers"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/sticker"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_space"
+                style="@style/collage_footer_imagebutton_style">
+
+                <TextView
+                    android:id="@+id/ttspace"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/space"
+                    android:gravity="center"
+                    android:text="Space"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/space"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/space"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_ratio"
+                style="@style/collage_footer_imagebutton_style">
+
+                <TextView
+                    android:id="@+id/ttratio"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/ratio"
+                    android:gravity="center"
+                    android:text="Ratio"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/ratio"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ratio"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_mirror_text"
+                style="@style/collage_footer_imagebutton_style">
+
+                <TextView
+                    android:id="@+id/tttext"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/text"
+                    android:gravity="center"
+                    android:text="Text"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/text"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/text"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_mirror_sticker"
+                style="@style/collage_footer_imagebutton_style"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/ttstickers1"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/stickers1"
+                    android:gravity="center"
+                    android:text="Sticker"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/stickers1"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/stickers_48x48"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_adj"
+                style="@style/collage_footer_imagebutton_style">
+
+                <TextView
+                    android:id="@+id/ttsquare_adjustment"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/square_adjustment"
+                    android:gravity="center"
+                    android:text="Filter"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/square_adjustment"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/filter"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/collage_context_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom"
+        android:fillViewport="true"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/collage_context_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_swap"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_swap"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_swap"
+                    android:gravity="center"
+                    android:text="Swap"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_swap"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/collage_context_swap"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_delete"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_delete_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_delete_icon"
+                    android:gravity="center"
+                    android:text="Delete"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_delete_icon"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_delete_icon"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_center"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_fill"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_fill"
+                    android:gravity="center"
+                    android:text="Fill"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_fill"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_fill"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_fit"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_inside"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_inside"
+                    android:gravity="center"
+                    android:text="Inside"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_inside"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_inside"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_filter"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_effect"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_effect"
+                    android:gravity="center"
+                    android:text="Filter"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_effect"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_effect"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_rotate_left"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_rotate_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_rotate_left"
+                    android:gravity="center"
+                    android:text="Left"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_rotate_left"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_rotate_left"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_rotate_right"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_rotate_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_rotate_right"
+                    android:gravity="center"
+                    android:text="Right"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_rotate_right"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_rotate_right"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_flip_horizontal"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_flip_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_flip_horizontal"
+                    android:gravity="center"
+                    android:text="horizontal"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_flip_horizontal"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_flip_horizontal"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_flip_vertical"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_flip_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_flip_vertical"
+                    android:gravity="center"
+                    android:text="Vertical"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_flip_vertical"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_flip_vertical"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button_collage_context_rotate_negative"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:drawableTop="@drawable/collage_context_flip_vertical"
+                android:text="-10"
+                android:textColor="@color/text_white"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button_collage_context_rotate_positive"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:drawableTop="@drawable/collage_context_flip_vertical"
+                android:text="+10"
+                android:textColor="@color/text_white"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_zoom_in"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_zoom_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_zoom_in"
+                    android:gravity="center"
+                    android:text="Zoom In"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_zoom_in"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_zoom_in"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_zoom_out"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_zoom_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_zoom_out"
+                    android:gravity="center"
+                    android:text="Zoom Out"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_zoom_out"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_zoom_out"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_move_left"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_move_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_move_left"
+                    android:gravity="center"
+                    android:text="Left"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_move_left"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_move_left"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_move_right"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_move_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_move_right"
+                    android:gravity="center"
+                    android:text="Right"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_move_right"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_move_right"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_move_up"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_move_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_move_up"
+                    android:gravity="center"
+                    android:text="Up"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_move_up"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_move_up"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_collage_context_move_down"
+                style="@style/collage_footer_context_imagebutton_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ttcollage_context_move_down"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/collage_context_move_down"
+                    android:gravity="center"
+                    android:text="Down"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textSize="@dimen/tool_text_size" />
+
+                <ImageView
+                    android:id="@+id/collage_context_move_down"
+                    android:layout_width="@dimen/tool_icon_size"
+                    android:layout_height="@dimen/tool_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/collage_context_move_down"
+                    android:scaleType="centerInside" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/select_image_swap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_layout"
+        android:layout_alignBottom="@+id/collage_footer"
+        android:background="@drawable/bg_bottom"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/hide_select_image_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/header_card_height"
+            android:clickable="true"
+            android:onClick="myClickHandler"
+            android:src="@drawable/ic_down_array" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/header_card_height"
+            android:alpha="0.2"
+            android:background="#ffffffff" />
+
+        <TextView
+            android:id="@+id/select_image_swap_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="Select another grid to swap!"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/select_image_filter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_layout"
+        android:layout_alignTop="@+id/collage_footer"
+        android:layout_alignBottom="@+id/collage_footer"
+        android:background="@drawable/bg_bottom"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/hide_select_image_warning_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="myClickHandler"
+            android:padding="5dp"
+            android:src="@drawable/ic_down_array" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:alpha="0.2"
+            android:background="#ffffffff" />
+
+        <TextView
+            android:id="@+id/select_image_filter_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Select a grid to edit."
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/collage_effect_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/all_elevation" />
+
+    <RelativeLayout
+        android:id="@+id/collage_text_view_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/all_elevation"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

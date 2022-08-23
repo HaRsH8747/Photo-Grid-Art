@@ -1,0 +1,23 @@
+# ninja log v5
+0	179	668085578	CMakeFiles/hello-jni.dir/hello-jni.c.o	4a81649d2fa690fd
+180	275	668085578	D:/Android/VivaPatel/Photo Collage Grid Pic Maker/app/build/intermediates/cxx/Debug/4fd1m573/obj/arm64-v8a/libhello-jni.so	9da0db4b22561f24
+0	12	0	clean	386320dd7d99f2fd
+5	1160	668085686	CMakeFiles/hello-jni.dir/hello-jni.c.o	4a81649d2fa690fd
+1160	1403	668085687	D:/Android/VivaPatel/Photo Collage Grid Pic Maker/app/build/intermediates/cxx/Debug/4fd1m573/obj/arm64-v8a/libhello-jni.so	9da0db4b22561f24
+1	14	0	clean	386320dd7d99f2fd
+14	461	668085922	CMakeFiles/hello-jni.dir/hello-jni.c.o	4a81649d2fa690fd
+462	654	668085922	D:/Android/VivaPatel/Photo Collage Grid Pic Maker/app/build/intermediates/cxx/Debug/4fd1m573/obj/arm64-v8a/libhello-jni.so	9da0db4b22561f24
+0	20	0	clean	386320dd7d99f2fd
+0	14	0	clean	386320dd7d99f2fd
+32	751	668086658	CMakeFiles/hello-jni.dir/hello-jni.c.o	4a81649d2fa690fd
+751	1548	668086659	D:/Android/VivaPatel/Photo Collage Grid Pic Maker/app/build/intermediates/cxx/Debug/4fd1m573/obj/arm64-v8a/libhello-jni.so	9da0db4b22561f24
+0	25	0	clean	386320dd7d99f2fd
+8	492	668087922	CMakeFiles/hello-jni.dir/hello-jni.c.o	4a81649d2fa690fd
+493	632	668087922	D:/Android/VivaPatel/Photo Collage Grid Pic Maker/app/build/intermediates/cxx/Debug/4fd1m573/obj/arm64-v8a/libhello-jni.so	9da0db4b22561f24
+0	16	0	clean	386320dd7d99f2fd
+0	21	0	clean	386320dd7d99f2fd
+5	503	668089052	CMakeFiles/hello-jni.dir/hello-jni.c.o	4a81649d2fa690fd
+503	695	668089053	D:/Android/VivaPatel/Photo Collage Grid Pic Maker/app/build/intermediates/cxx/Debug/4fd1m573/obj/arm64-v8a/libhello-jni.so	9da0db4b22561f24
+0	18	0	clean	386320dd7d99f2fd
+6	432	668089567	CMakeFiles/hello-jni.dir/hello-jni.c.o	4a81649d2fa690fd
+433	569	668089567	D:/Android/VivaPatel/Photo Collage Grid Pic Maker/app/build/intermediates/cxx/Debug/4fd1m573/obj/arm64-v8a/libhello-jni.so	9da0db4b22561f24

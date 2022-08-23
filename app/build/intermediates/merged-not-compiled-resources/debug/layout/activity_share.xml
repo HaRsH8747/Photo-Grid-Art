@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="@dimen/header_image_size"
+                android:layout_height="@dimen/header_image_size"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Share"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/header_text_size" />
+
+            <ImageView
+                android:id="@+id/mycreation"
+                android:layout_width="@dimen/header_image_size"
+                android:layout_height="@dimen/header_image_size"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/mycreation" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:scrollbars="none"
+        android:layout_marginBottom="90dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <ImageView
+        android:elevation="@dimen/all_elevation"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/finalimg"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_creation"
+        android:scaleType="fitCenter" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/finalimg"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:id="@+id/buttonlayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#22ffffff"
+            android:baselineAligned="false" android:orientation="horizontal"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/share_icon_margin"
+                android:weightSum="5"
+                android:id="@+id/iv_facebook"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_weight="5"
+                    android:id="@+id/facebookic"
+                    android:layout_height="@dimen/share_icon_size"
+                    android:layout_width="match_parent"
+                    android:background="#03ffffff"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/fb" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/facebookic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Facebook"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:id="@+id/iv_instragram"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/share_icon_margin"
+                android:weightSum="5"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_weight="5"
+                    android:id="@+id/instagramic"
+                    android:layout_height="@dimen/share_icon_size"
+                    android:layout_width="match_parent"
+                    android:background="#03ffffff"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ig" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/instagramic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Instagram"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/iv_more"
+                android:layout_margin="@dimen/share_icon_margin"
+                android:weightSum="5"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_weight="5"
+                    android:id="@+id/multipleic"
+                    android:layout_height="@dimen/share_icon_size"
+                    android:layout_width="match_parent"
+                    android:background="#03ffffff"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sh"  />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/multipleic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Share"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:id="@+id/delete"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/share_icon_margin"
+                android:weightSum="5"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_weight="5"
+                    android:id="@+id/deleteic"
+                    android:layout_height="@dimen/share_icon_size"
+                    android:layout_width="match_parent"
+                    android:background="#03ffffff"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/trash" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/deleteic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Delete"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+    <FrameLayout
+        android:id="@+id/adsstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#dfdfdf"
+        android:minHeight="50dp">
+
+        <LinearLayout
+            android:id="@+id/adsmultyViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:gravity="center|bottom"
+            android:orientation="vertical" />
+
+    </FrameLayout>
+</RelativeLayout>
+

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/font_fragment_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ED000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom2"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/button_text_color"
+            style="@style/canvas_text_toolbar_button_style"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_save"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/canvas_text_color"
+                android:textColor="@color/white"
+                android:fontFamily="@font/l_regular"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_save"
+                android:layout_width="@dimen/tool_icon_size2"
+                android:layout_height="@dimen/tool_icon_size2"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/lib_effect"
+                android:backgroundTint="@android:color/white"
+                android:scaleType="centerInside"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_font_ok"
+            style="@style/canvas_text_toolbar_button_style"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_save1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@android:string/ok"
+                android:textColor="@color/white"
+                android:fontFamily="@font/l_regular"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_save1"
+                android:layout_width="@dimen/tool_icon_size2"
+                android:layout_height="@dimen/tool_icon_size2"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/ok"
+                android:backgroundTint="@android:color/white"
+                android:scaleType="centerInside"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textview_font"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/preview_text_view_height"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_edt"
+        android:clickable="true"
+        android:gravity="center"
+        android:lines="1"
+        android:padding="5dp"
+        android:text="@string/preview_text"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/preview_text_size" />
+
+    <EditText
+        android:id="@+id/edittext_font"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/preview_text_view_height"
+        android:layout_below="@+id/textview_font"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_edt"
+        android:ems="1"
+        android:gravity="center"
+        android:hint="Enter text here.."
+        android:imeOptions="actionDone"
+        android:inputType="textNoSuggestions"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="#ffffffff"
+        android:textColorHint="#ffffff"
+        android:textCursorDrawable="@color/black" />
+
+    <GridView
+        android:id="@+id/gridview_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll"
+        android:layout_below="@+id/edittext_font"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:cacheColorHint="#FFFFFF"
+        android:numColumns="3" />
+
+</RelativeLayout>

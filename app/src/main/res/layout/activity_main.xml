@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ads"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_college"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp"
+            android:background="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/layout_single_editor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/collage"
+                android:src="@drawable/collage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="93dp"
+                android:fontFamily="@font/l_regular"
+                android:text="@string/collage"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_single_editor"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_college"
+            app:layout_constraintEnd_toStartOf="@+id/layout_scrapbook"
+            app:layout_constraintStart_toEndOf="@+id/layout_college"
+            app:layout_constraintTop_toTopOf="@+id/layout_college">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/square_pic"
+                android:src="@drawable/square_pic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="93dp"
+                android:fontFamily="@font/l_regular"
+                android:text="@string/square_pic"
+                android:textColor="@color/black"
+                android:textSize="15sp"  />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_scrapbook"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_college"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/layout_single_editor"
+            app:layout_constraintTop_toTopOf="@+id/layout_college">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/scrapbook"
+                android:src="@drawable/scrapbook" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="93dp"
+                android:fontFamily="@font/l_regular"
+                android:text="@string/scrapbook"
+                android:textColor="@color/black"
+                android:textSize="15sp"  />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_camera"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="280dp"
+            android:background="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/layout_single_editor"
+            app:layout_constraintEnd_toStartOf="@+id/layout_mirror"
+            app:layout_constraintStart_toStartOf="@+id/layout_college"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/camera"
+                android:src="@drawable/camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="93dp"
+                android:fontFamily="@font/l_regular"
+                android:text="@string/camera"
+                android:textColor="@color/black"
+                android:textSize="15sp"  />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_mirror"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_camera"
+            app:layout_constraintEnd_toEndOf="@+id/layout_scrapbook"
+            app:layout_constraintStart_toEndOf="@+id/layout_camera"
+            app:layout_constraintStart_toStartOf="@+id/layout_single_editor"
+            app:layout_constraintTop_toTopOf="@+id/layout_camera">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/mirror"
+                android:src="@drawable/mirror" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="93dp"
+                android:fontFamily="@font/l_regular"
+                android:text="@string/mirror"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dfdfdf"
+        android:minHeight="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/mobadslayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/gallery_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

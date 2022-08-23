@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "D:\\Android\\Vivapatel\\Photo Collage Grid Pic Maker\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\trush\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+      "-C",
+      "D:\\Android\\Vivapatel\\Photo Collage Grid Pic Maker\\app\\.cxx\\cmake\\release\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\trush\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+    "-C",
+    "D:\\Android\\Vivapatel\\Photo Collage Grid Pic Maker\\app\\.cxx\\cmake\\release\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "hello-jni-Release-x86": {
+      "artifactName": "hello-jni",
+      "buildCommandComponents": [
+        "C:\\Users\\trush\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "-C",
+        "D:\\Android\\Vivapatel\\Photo Collage Grid Pic Maker\\app\\.cxx\\cmake\\release\\x86",
+        "hello-jni"
+      ],
+      "abi": "x86",
+      "output": "D:\\Android\\Vivapatel\\Photo Collage Grid Pic Maker\\app\\build\\intermediates\\cmake\\release\\obj\\x86\\libhello-jni.so",
+      "runtimeFiles": []
+    }
+  }
+}

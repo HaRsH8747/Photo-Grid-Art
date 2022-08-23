@@ -1,0 +1,512 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="neo.photogridart"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml
+10
+11    <uses-feature
+11-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:6:5-8:36
+12        android:name="android.hardware.camera.flash"
+12-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:7:9-53
+13        android:required="false" />
+13-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:8:9-33
+14    <uses-feature
+14-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:9:5-11:36
+15        android:name="android.hardware.camera.autofocus"
+15-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:10:9-57
+16        android:required="false" />
+16-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:11:9-33
+17
+18    <uses-permission android:name="android.permission.FLASHLIGHT" />
+18-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:13:5-69
+18-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:13:22-66
+19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+19-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:14:5-80
+19-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:14:22-77
+20    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+20-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:15:5-81
+20-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:15:22-78
+21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+21-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:16:5-79
+21-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:16:22-76
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:17:5-67
+22-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:17:22-64
+23    <uses-permission android:name="android.permission.CAMERA" />
+23-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:18:5-65
+23-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:18:22-62
+24    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+24-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:19:5-117
+24-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:19:22-114
+25    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+25-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:20:5-79
+25-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:20:22-76
+26
+27    <!-- Android package visibility setting -->
+28    <queries>
+28-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:28:5-44:15
+29
+30        <!-- For browser content -->
+31        <intent>
+31-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:31:9-37:18
+32            <action android:name="android.intent.action.VIEW" />
+32-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:32:13-65
+32-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:32:21-62
+33
+34            <category android:name="android.intent.category.BROWSABLE" />
+34-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:34:13-74
+34-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:34:23-71
+35
+36            <data android:scheme="https" />
+36-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:36:13-44
+36-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:36:19-41
+37        </intent>
+38        <!-- End of browser content -->
+39        <!-- For CustomTabsService -->
+40        <intent>
+40-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:40:9-42:18
+41            <action android:name="android.support.customtabs.action.CustomTabsService" />
+41-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:41:13-90
+41-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:41:21-87
+42        </intent>
+43        <!-- End of CustomTabsService -->
+44    </queries>
+45
+46    <uses-permission android:name="android.permission.WAKE_LOCK" />
+46-->[com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\harshmoradiya\.gradle\caches\transforms-3\5bc64146f2f0aaff775891808be88dc0\transformed\jetified-play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:25:5-68
+46-->[com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\harshmoradiya\.gradle\caches\transforms-3\5bc64146f2f0aaff775891808be88dc0\transformed\jetified-play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:25:22-65
+47    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+47-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:27:5-81
+47-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:27:22-78
+48    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+48-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:28:5-77
+48-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:28:22-74
+49
+50    <application
+50-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:22:5-101:19
+51        android:name="neo.photogridart.AppCheck"
+51-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:23:9-49
+52        android:allowBackup="true"
+52-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:24:9-35
+53        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+53-->[androidx.core:core:1.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\b9e4376e452ce4f1a2bbb1fc4b534124\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+54        android:debuggable="true"
+55        android:hardwareAccelerated="true"
+55-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:25:9-43
+56        android:icon="@mipmap/logo_main"
+56-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:26:9-41
+57        android:label="@string/app_name"
+57-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:27:9-41
+58        android:largeHeap="true"
+58-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:28:9-33
+59        android:requestLegacyExternalStorage="true"
+59-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:29:9-52
+60        android:roundIcon="@mipmap/logo_main_round"
+60-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:30:9-52
+61        android:supportsRtl="true"
+61-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:31:9-35
+62        android:testOnly="true"
+63        android:theme="@style/AppTheme"
+63-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:32:9-40
+64        android:usesCleartextTraffic="true" >
+64-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:33:9-44
+65        <activity
+65-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:36:9-39:50
+66            android:name="neo.photogridart.activities.PrivacyPolicy"
+66-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:37:13-69
+67            android:exported="false"
+67-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:38:13-37
+68            android:theme="@style/AppThemeone" />
+68-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:39:13-47
+69        <activity
+69-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:41:9-44:52
+70            android:name="neo.photogridart.mycreation.ImageDisplayActivity"
+70-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:42:13-76
+71            android:exported="false"
+71-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:43:13-37
+72            android:screenOrientation="portrait" />
+72-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:44:13-49
+73        <activity
+73-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:45:9-48:52
+74            android:name="neo.photogridart.mycreation.MyCreationActivity"
+74-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:46:13-74
+75            android:exported="false"
+75-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:47:13-37
+76            android:screenOrientation="portrait" />
+76-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:48:13-49
+77        <activity
+77-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:49:9-52:52
+78            android:name="neo.photogridart.activities.CreateActivity"
+78-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:50:13-70
+79            android:exported="false"
+79-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:51:13-37
+80            android:screenOrientation="portrait" />
+80-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:52:13-49
+81        <activity
+81-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:53:9-57:50
+82            android:name="neo.photogridart.activities.StartActivity"
+82-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:54:13-69
+83            android:exported="false"
+83-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:55:13-37
+84            android:screenOrientation="portrait"
+84-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:56:13-49
+85            android:theme="@style/AppThemeone" />
+85-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:57:13-47
+86        <activity
+86-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:58:9-67:20
+87            android:name="neo.photogridart.activities.SplashActivity"
+87-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:59:13-70
+88            android:exported="true"
+88-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:60:13-36
+89            android:screenOrientation="portrait" >
+89-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:61:13-49
+90            <intent-filter>
+90-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:62:13-66:29
+91                <action android:name="android.intent.action.MAIN" />
+91-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:63:17-69
+91-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:63:25-66
+92
+93                <category android:name="android.intent.category.LAUNCHER" />
+93-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:65:17-77
+93-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:65:27-74
+94            </intent-filter>
+95        </activity>
+96        <activity
+96-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:68:9-72:52
+97            android:name="neo.photogridart.activities.MainActivity"
+97-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:69:13-68
+98            android:exported="false"
+98-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:70:13-37
+99            android:label="@string/app_name"
+99-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:71:13-45
+100            android:screenOrientation="portrait" />
+100-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:72:13-49
+101        <activity
+101-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:73:9-76:52
+102            android:name="neo.photogridart.activities.SaveImageActivity"
+102-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:74:13-73
+103            android:exported="false"
+103-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:75:13-37
+104            android:screenOrientation="portrait" />
+104-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:76:13-49
+105        <activity
+105-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:77:9-80:52
+106            android:name="neo.photogridart.collagelib.CollageActivity"
+106-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:78:13-71
+107            android:exported="false"
+107-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:79:13-37
+108            android:screenOrientation="portrait" />
+108-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:80:13-49
+109        <activity
+109-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:81:9-84:52
+110            android:name="neo.photogridart.activities.MirrorNewActivity"
+110-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:82:13-73
+111            android:exported="false"
+111-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:83:13-37
+112            android:screenOrientation="portrait" />
+112-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:84:13-49
+113
+114        <provider
+115            android:name="androidx.core.content.FileProvider"
+115-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:88:13-62
+116            android:authorities="neo.photogridart.provider"
+116-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:89:13-60
+117            android:exported="false"
+117-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:90:13-37
+118            android:grantUriPermissions="true" >
+118-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:91:13-47
+119            <meta-data
+119-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:92:13-94:58
+120                android:name="android.support.FILE_PROVIDER_PATHS"
+120-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:93:17-67
+121                android:resource="@xml/provider_paths" />
+121-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:94:17-55
+122        </provider>
+123
+124        <meta-data
+124-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:97:9-99:70
+125            android:name="com.google.android.gms.ads.APPLICATION_ID"
+125-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:98:13-69
+126            android:value="ca-app-pub-3940256099942544~3347511713" />
+126-->C:\Users\harshmoradiya\AndroidStudioProjects\Photo Grid Art\app\src\main\AndroidManifest.xml:99:13-67
+127
+128        <provider
+128-->[com.squareup.picasso:picasso:2.71828] C:\Users\harshmoradiya\.gradle\caches\transforms-3\26a220ef72305c83eb8ad0041b140b7c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+129            android:name="com.squareup.picasso.PicassoProvider"
+129-->[com.squareup.picasso:picasso:2.71828] C:\Users\harshmoradiya\.gradle\caches\transforms-3\26a220ef72305c83eb8ad0041b140b7c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+130            android:authorities="neo.photogridart.com.squareup.picasso"
+130-->[com.squareup.picasso:picasso:2.71828] C:\Users\harshmoradiya\.gradle\caches\transforms-3\26a220ef72305c83eb8ad0041b140b7c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+131            android:exported="false" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+131-->[com.squareup.picasso:picasso:2.71828] C:\Users\harshmoradiya\.gradle\caches\transforms-3\26a220ef72305c83eb8ad0041b140b7c\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+132        <activity
+132-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:49:9-53:64
+133            android:name="com.google.android.gms.ads.AdActivity"
+133-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:50:13-65
+134            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+134-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:51:13-122
+135            android:exported="false"
+135-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:52:13-37
+136            android:theme="@android:style/Theme.Translucent" />
+136-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:53:13-61
+137
+138        <provider
+138-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:55:9-59:39
+139            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+139-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:56:13-76
+140            android:authorities="neo.photogridart.mobileadsinitprovider"
+140-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:57:13-73
+141            android:exported="false"
+141-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:58:13-37
+142            android:initOrder="100" />
+142-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:59:13-36
+143
+144        <service
+144-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:61:9-64:40
+145            android:name="com.google.android.gms.ads.AdService"
+145-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:62:13-64
+146            android:enabled="true"
+146-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:63:13-35
+147            android:exported="false" />
+147-->[com.google.android.gms:play-services-ads-lite:20.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\6bcacd95e544b38ab77c26513cce62dd\transformed\jetified-play-services-ads-lite-20.6.0\AndroidManifest.xml:64:13-37
+148
+149        <activity
+149-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\2fd9ede56d2be43affd99267740b27bc\transformed\jetified-play-services-base-17.6.0\AndroidManifest.xml:23:9-26:75
+150            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+150-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\2fd9ede56d2be43affd99267740b27bc\transformed\jetified-play-services-base-17.6.0\AndroidManifest.xml:24:13-79
+151            android:exported="false"
+151-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\2fd9ede56d2be43affd99267740b27bc\transformed\jetified-play-services-base-17.6.0\AndroidManifest.xml:25:13-37
+152            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+152-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\2fd9ede56d2be43affd99267740b27bc\transformed\jetified-play-services-base-17.6.0\AndroidManifest.xml:26:13-72
+153
+154        <meta-data
+154-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\e31ae4c317e5fe3c313af7d942037411\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:23:9-25:69
+155            android:name="com.google.android.gms.version"
+155-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\e31ae4c317e5fe3c313af7d942037411\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:24:13-58
+156            android:value="@integer/google_play_services_version" />
+156-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\e31ae4c317e5fe3c313af7d942037411\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:25:13-66
+157
+158        <provider
+158-->[androidx.emoji2:emoji2:1.0.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\4d40ec21232b611dd716b892ede208d6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+159            android:name="androidx.startup.InitializationProvider"
+159-->[androidx.emoji2:emoji2:1.0.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\4d40ec21232b611dd716b892ede208d6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+160            android:authorities="neo.photogridart.androidx-startup"
+160-->[androidx.emoji2:emoji2:1.0.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\4d40ec21232b611dd716b892ede208d6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+161            android:exported="false" >
+161-->[androidx.emoji2:emoji2:1.0.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\4d40ec21232b611dd716b892ede208d6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+162            <meta-data
+162-->[androidx.emoji2:emoji2:1.0.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\4d40ec21232b611dd716b892ede208d6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+163                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+163-->[androidx.emoji2:emoji2:1.0.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\4d40ec21232b611dd716b892ede208d6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+164                android:value="androidx.startup" />
+164-->[androidx.emoji2:emoji2:1.0.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\4d40ec21232b611dd716b892ede208d6\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+165            <meta-data
+165-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:36:13-38:52
+166                android:name="androidx.work.WorkManagerInitializer"
+166-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:37:17-68
+167                android:value="androidx.startup" />
+167-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:38:17-49
+168            <meta-data
+168-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\b5a10263a72c0b80aefb6f8f76c83ace\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+169                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+169-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\b5a10263a72c0b80aefb6f8f76c83ace\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+170                android:value="androidx.startup" />
+170-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\b5a10263a72c0b80aefb6f8f76c83ace\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+171        </provider>
+172
+173        <service
+173-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:41:9-46:35
+174            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+174-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:42:13-88
+175            android:directBootAware="false"
+175-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:43:13-44
+176            android:enabled="@bool/enable_system_alarm_service_default"
+176-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:44:13-72
+177            android:exported="false" />
+177-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:45:13-37
+178        <service
+178-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:47:9-53:35
+179            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+179-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:48:13-84
+180            android:directBootAware="false"
+180-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:49:13-44
+181            android:enabled="@bool/enable_system_job_service_default"
+181-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:50:13-70
+182            android:exported="true"
+182-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:51:13-36
+183            android:permission="android.permission.BIND_JOB_SERVICE" />
+183-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:52:13-69
+184        <service
+184-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:54:9-59:35
+185            android:name="androidx.work.impl.foreground.SystemForegroundService"
+185-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:55:13-81
+186            android:directBootAware="false"
+186-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:56:13-44
+187            android:enabled="@bool/enable_system_foreground_service_default"
+187-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:57:13-77
+188            android:exported="false" />
+188-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:58:13-37
+189
+190        <receiver
+190-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:61:9-66:35
+191            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+191-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:62:13-88
+192            android:directBootAware="false"
+192-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:63:13-44
+193            android:enabled="true"
+193-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:64:13-35
+194            android:exported="false" />
+194-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:65:13-37
+195        <receiver
+195-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:67:9-77:20
+196            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+196-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:68:13-106
+197            android:directBootAware="false"
+197-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:69:13-44
+198            android:enabled="false"
+198-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:70:13-36
+199            android:exported="false" >
+199-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:71:13-37
+200            <intent-filter>
+200-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:73:13-76:29
+201                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+201-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:74:17-87
+201-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:74:25-84
+202                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+202-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:75:17-90
+202-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:75:25-87
+203            </intent-filter>
+204        </receiver>
+205        <receiver
+205-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:78:9-88:20
+206            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+206-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:79:13-104
+207            android:directBootAware="false"
+207-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:80:13-44
+208            android:enabled="false"
+208-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:81:13-36
+209            android:exported="false" >
+209-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:82:13-37
+210            <intent-filter>
+210-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:84:13-87:29
+211                <action android:name="android.intent.action.BATTERY_OKAY" />
+211-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:85:17-77
+211-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:85:25-74
+212                <action android:name="android.intent.action.BATTERY_LOW" />
+212-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:86:17-76
+212-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:86:25-73
+213            </intent-filter>
+214        </receiver>
+215        <receiver
+215-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:89:9-99:20
+216            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+216-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:90:13-104
+217            android:directBootAware="false"
+217-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:91:13-44
+218            android:enabled="false"
+218-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:92:13-36
+219            android:exported="false" >
+219-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:93:13-37
+220            <intent-filter>
+220-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:95:13-98:29
+221                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+221-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:96:17-83
+221-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:96:25-80
+222                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+222-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:97:17-82
+222-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:97:25-79
+223            </intent-filter>
+224        </receiver>
+225        <receiver
+225-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:100:9-109:20
+226            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+226-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:101:13-103
+227            android:directBootAware="false"
+227-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:102:13-44
+228            android:enabled="false"
+228-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:103:13-36
+229            android:exported="false" >
+229-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:104:13-37
+230            <intent-filter>
+230-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:106:13-108:29
+231                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+231-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:107:17-79
+231-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:107:25-76
+232            </intent-filter>
+233        </receiver>
+234        <receiver
+234-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:110:9-121:20
+235            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+235-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:111:13-88
+236            android:directBootAware="false"
+236-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:112:13-44
+237            android:enabled="false"
+237-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:113:13-36
+238            android:exported="false" >
+238-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:114:13-37
+239            <intent-filter>
+239-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:116:13-120:29
+240                <action android:name="android.intent.action.BOOT_COMPLETED" />
+240-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:117:17-79
+240-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:117:25-76
+241                <action android:name="android.intent.action.TIME_SET" />
+241-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:118:17-73
+241-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:118:25-70
+242                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+242-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:119:17-81
+242-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:119:25-78
+243            </intent-filter>
+244        </receiver>
+245        <receiver
+245-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:122:9-131:20
+246            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+246-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:123:13-99
+247            android:directBootAware="false"
+247-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:124:13-44
+248            android:enabled="@bool/enable_system_alarm_service_default"
+248-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:125:13-72
+249            android:exported="false" >
+249-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:126:13-37
+250            <intent-filter>
+250-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:128:13-130:29
+251                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+251-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:129:17-98
+251-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:129:25-95
+252            </intent-filter>
+253        </receiver>
+254        <receiver
+254-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:132:9-142:20
+255            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+255-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:133:13-78
+256            android:directBootAware="false"
+256-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:134:13-44
+257            android:enabled="true"
+257-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:135:13-35
+258            android:exported="true"
+258-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:136:13-36
+259            android:permission="android.permission.DUMP" >
+259-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:137:13-57
+260            <intent-filter>
+260-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:139:13-141:29
+261                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+261-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:140:17-88
+261-->[androidx.work:work-runtime:2.7.0] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f543f15aa2620c3bb8ad4e24810c2986\transformed\work-runtime-2.7.0\AndroidManifest.xml:140:25-85
+262            </intent-filter>
+263        </receiver>
+264
+265        <service
+265-->[androidx.room:room-runtime:2.2.5] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f997d50b6ab710f7154e8610b4204452\transformed\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+266            android:name="androidx.room.MultiInstanceInvalidationService"
+266-->[androidx.room:room-runtime:2.2.5] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f997d50b6ab710f7154e8610b4204452\transformed\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+267            android:directBootAware="true"
+267-->[androidx.room:room-runtime:2.2.5] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f997d50b6ab710f7154e8610b4204452\transformed\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+268            android:exported="false" />
+268-->[androidx.room:room-runtime:2.2.5] C:\Users\harshmoradiya\.gradle\caches\transforms-3\f997d50b6ab710f7154e8610b4204452\transformed\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+269    </application>
+270
+271</manifest>

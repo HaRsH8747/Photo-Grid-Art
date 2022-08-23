@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/canvas_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="@dimen/all_elevation">
+
+
+    <LinearLayout
+        android:id="@+id/text_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom2"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/button_cancel_action"
+            style="@style/canvas_text_toolbar_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_Back"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/l_regular"
+                android:gravity="center"
+                android:text="@android:string/cancel"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_Back"
+                android:layout_width="@dimen/tool_icon_size2"
+                android:layout_height="@dimen/tool_icon_size2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/clear"
+                android:backgroundTint="@android:color/white"
+                android:scaleType="centerInside" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_apply_action"
+            style="@style/canvas_text_toolbar_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv_Back0"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/l_regular"
+                android:gravity="center"
+                android:text="@android:string/ok"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_Back0"
+                android:layout_width="@dimen/tool_icon_size2"
+                android:layout_height="@dimen/tool_icon_size2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/ok"
+                android:backgroundTint="@android:color/white"
+                android:scaleType="centerInside" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

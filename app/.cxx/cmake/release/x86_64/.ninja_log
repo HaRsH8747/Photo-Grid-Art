@@ -1,0 +1,7 @@
+# ninja log v5
+0	661	650039091	CMakeFiles/hello-jni.dir/hello-jni.c.o	e06b97b0216a1518
+662	770	650039091	D:/Android/Vivapatel/Photo Collage Grid Pic Maker/app/build/intermediates/cmake/release/obj/x86_64/libhello-jni.so	538ff9a1ad54b11e
+2	516	668085344	build.ninja	a6712fc6c8808bfb
+0	9	0	clean	386320dd7d99f2fd
+1	11	0	clean	386320dd7d99f2fd
+0	11	0	clean	386320dd7d99f2fd

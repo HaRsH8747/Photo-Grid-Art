@@ -1,0 +1,3 @@
+D:/Android/VivaPatel/Photo Collage Grid Pic Maker/app/.cxx/RelWithDebInfo/11233l3n/x86_64/CMakeFiles/hello-jni.dir
+D:/Android/VivaPatel/Photo Collage Grid Pic Maker/app/.cxx/RelWithDebInfo/11233l3n/x86_64/CMakeFiles/edit_cache.dir
+D:/Android/VivaPatel/Photo Collage Grid Pic Maker/app/.cxx/RelWithDebInfo/11233l3n/x86_64/CMakeFiles/rebuild_cache.dir

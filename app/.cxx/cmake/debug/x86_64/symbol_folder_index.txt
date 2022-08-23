@@ -1,0 +1,1 @@
+D:\Android\VivaPatel\Photo Collage Grid Pic Maker\app\build\intermediates\cmake\debug\obj\x86_64

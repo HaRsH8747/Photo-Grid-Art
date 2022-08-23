@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+    <color name="backbgdailkog">#000</color>
+    <color name="start_color">#323030</color>
+    <color name="end_color">#807e7f</color>
+    <color name="red_text">#f61471</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blacktransparent">#B3000000</color>
+    <color name="black">#000000</color>
+    <color name="backgroundcolor">#ffffff</color>
+    <color name="light_gray_text_color">#ffffff</color>
+
+    <color name="primary">@color/end_color</color>
+    <color name="footer_button_color_pressed">@color/start_color</color>
+    <color name="blue">#1ea0d7</color>
+    <color name="text_white">#ffffff</color>
+
+    <color name="primary_dark">#1e857b</color>
+    <color name="primary_dark_material_dark">@android:color/black</color>
+    <color name="primary_dark_material_light">@color/material_grey_600</color>
+    <color name="primary_material_dark">@color/material_grey_900</color>
+    <color name="primary_material_light">@color/material_grey_100</color>
+    <color name="primary_text_default_material_dark">#ffffffff</color>
+    <color name="primary_text_default_material_light">#de000000</color>
+    <color name="primary_text_disabled_material_dark">#4dffffff</color>
+    <color name="primary_text_disabled_material_light">#39000000</color>
+
+    <color name="gallery_ok_button_normal">#f61471</color>
+
+    <color name="red_color">#f61471</color>
+    <color name="red_color_clicked">#f61471</color>
+    <color name="color1_clicked">#947d5d</color>
+    <color name="color1">#B49870</color>
+
+    <color name="lightGrey">#1a1b21</color>
+    <color name="duskYellow">#e3ad20</color>
+
+</resources>

@@ -1,0 +1,1 @@
+D:\Android\Vivapatel\Photo Collage Grid Pic Maker\app\build\intermediates\cmake\release\obj\armeabi-v7a
